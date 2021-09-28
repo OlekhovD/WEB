@@ -3,151 +3,167 @@
 
 <head>
     <meta charset = "UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Пример сайта</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="header-container">
-            <div class="top-img">
-                <img src="image2.png"
-                alt="logo" 
-                class="logo">
-            </div>
-            <div class="name">
-                <p> Название сайта </p>
-            </div>
+<body class="body">
+    <header class="header">
+        <div class="container header_container">
+            <img class="header_logo" src="image2.png" alt="logo" >
+            <span class="header_heading">Название сайта</span>
         </div>
     </header>
-    <nav class="topnav">
-        <a href="#links" class="topnav">Ссылки</a>
-        <a href="#table" class="topnav">Таблица</a>
-        <a href="#form" class="topnav">Форма</a>
+    <nav class="container nav">
+        <ul class="nav_list">
+            <li class="nav__item"><a href="#links" class="nav_link">Ссылки</a></li>
+            <li class="nav__item"><a href="#table" class="nav_link">Таблица</a></li>
+            <li class="nav__item"><a href="#form" class="nav_link">Форма</a></li>
+        </ul>
     </nav>
-    <div class = "main">
-        <h1 id = "links">Ссылки</h1>
-        <ol>
-            <li><a href = "http://example.com/">Абсолютная гиперссылка на главную страницу сайта example.com</a></li>
-            <li><a href = "https://example.com/">Абсолютная на главную сайта example.com в протоколе https;</a></li>
-            <li><a href = "ftp://example.com/myfile.zip">Ссылка на файл на сервере FTP без авторизации;</a></li>
-            <li><a href = "ftp://user:password@example.com/myfile.zip">Ссылка на файл на сервере FTP с авторизацией;</a></li>
-            <li><a href = "http://example.com/page#about">Ссылка на фрагмент страницы некоторого сайта;</a></li>
-            <li><a href = "#services">Ссылка на фрагмент текущей страницы;</a></li>
-            <li><a href="http://example.com/?id=master&repo=chat">Ссылка с двумя параметрами в URL;</a></li>
-            <li>
-                <a href="#about" title="О компании">О компании</a>
-                <a href="#services" title="Услуги">Услуги</a>
-                <a href="#" title="Главная">Главная</a>
-            </li>
-            <li><a>Ссылка без href</a> </li>
-            <li><a href="">Ссылка с пустым href</a></li>
-            <li><a href="https://test.com" rel="nofollow">Ссылка, по которой запрещён переход поисковикам</a></li>
-            <li><a href="https://test.com" rel="noindex">Запрещённая для индексации поисковиками</a></li>
-            <li>
-                <p><a href="https://example.com">Контекстная</a> в тексте абзаца</p>
-            </li>
-            <li>
-                <a href="https://self-learning.ru/course/sql-basics?utm_source=infocomp&utm_medium=banner&utm_campaign=sqlbasics&utm_content=sidebar">
-                <img src="image1.jpg" width="300" height="300" alt="flower">
-                </a>
-            </li>
-            <li>
-                <img src="image1.jpg" width="300" height="300" usemap="#navigation" alt="map">
-                <map name="navigation">
-                <area shape="circle"
-                coords="400,400,200"
-                href="https://www.youtube.com/"
-                alt="circle">
-                <area shape="rect"
-                coords="0,0,200,200"
-                href="https://www.google.com/maps"
-                alt="rectangle">
-                </map>
-            </li>
-            <li><a href="./myfile.zip">Относительная ссылка на файл в том же каталоге</a></li>
-            <li><a href="./about/contacts.html">Относительная ссылка на файл в каталоге about</a></li>
-            <li><a href="../myfile.zip">Относительная ссылка на файл в каталоге, выше нынешнего на один</a></li>
-            <li><a href="../../random.html">Относительная ссылка на файл двумя каталогами выше</a></li>
-            <li><a href="/">Сокращенная ссылка на главную</a></li>
-            <li><a href="/form.html">Сокращенная на внутреннюю</a></li>
-        </ol>
-        <br>
-        <h1 id = "table">Таблица</h1>
-        <table>
-            <tr>
-              <th>Первый</th>
-              <th>Второй</th>
-              <th>Третий</th>
-            </tr>
-            <tbody>
-            <tr>
-              <td colspan="2">1 2</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>11</td>
-              <td>12</td>
-            </tr>
-            <tr>
-                <td colspan="3">13 14 15</td>
-            </tr>
-            </tbody>
-        </table>
-        <br>
-        <h1 id = "form">Форма</h1>
-        <form action="#" method="post">
-            <h2>Имя:</h2>
-                <input type="text"
-                name="fill-name"
-                value="Имя:"><br>
-            <h2>E-mail:</h2>
-                <input type="email"
-                name="email"
-                value="email@mail.ru"><br>
-            <h2>Дата рождения:</h2>
-                <input type="date"
-                name="date"
-                value="2000-01-01"><br>
-            <h2>Пол:</h2>
-                <input type="radio"
-                checked="checked"
-                name="gender"
-                value="Мужской" />Мужской<br>
-                <input type="radio"
-                name="gender"
-                value="Женский" />Женский<br>
-            <h2>Количество конечностей:</h2>
-                <input type="radio" checked="checked"
-                name="count" value="Четыре" />Четыре<br>
-                <input type="radio"
-                name="count" value="Пять" />Пять<br>
-            <h2>Сверхспособности: </h2>
-                <select name="superpowers"
-                multiple="multiple">
-                <option value="Значение1">Высыпаться</option>
-                <option value="Значение2" selected="selected">Левитация</option>
-                <option value="Значение3" selected="selected">Бессмертие</option>
-                </select><br>
-            <h2>Биография</h2>
-                <textarea name="textarea"></textarea><br>
-            <input type="checkbox"
-            name="check">С контрактом ознакомлен(а)<br>
-            <input type="submit" value="Отправить">
-        </form>
+    <div class = "container">
+        <main class="main">
+            <section class="templates">
+                <div class="anchor">
+                    <h1 id = "links">Ссылки</h1>
+                    <ol class="anchor__list">
+                        <li class="anchor_item"><a href="http://example.com/" class="anchor_link">Абсолютная гиперссылка на главную страницу сайта example.com;</a></li>
+                        <li class="anchor_item"><a href="https://example.com/" class="anchor_link">Абсолютная на главную сайта example.com в протоколе https;</a></li>
+                        <li class="anchor_item"><a href="ftp://example.com/myfile.zip" class="anchor_link">Ссылка на файл на сервере FTP без авторизации;</a></li>
+                        <li class="anchor_item"><a href="ftp://user:password@example.com/myfile.zip" class="anchor_link">Ссылка на файл на сервере FTP с авторизацией;</a></li>
+                        <li class="anchor_item"><a href="http://example.com/page#about" class="anchor_link">Ссылка на фрагмент страницы некоторого сайта;</a></li>
+                        <li class="anchor_item"><a href="#services" class="anchor_link">Ссылка на фрагмент текущей страницы;</a></li>
+                        <li class="anchor_item"><a href="http://example.com/?id=master&repo=chat" class="anchor_link">Ссылка с двумя параметрами в URL;</a></li>
+                      </ol>
+                </div>
+              
+                <div class="menu">
+                    <h2 class="menu_heading">Навигационное меню</h2>
+                    <a href="#about" title="О компании">О компании</a>
+                    <a href="#services" title="Услуги">Услуги</a>
+                    <a href="#" title="Главная">Главная</a>
+                    <ol class="menu_list">
+                        <li class="menu_item"><a class="menu_link">Ссылка без href</a></li>
+                        <li class="menu_item"><a href class="menu_link">Ссылка с пустым href</a></li>
+                        <li class="menu_item"><a href="https://test.com" class="menu_link" rel="nofollow">Ссылка nofollow</a></li>
+                        <li class="menu_item"><a href="https://test.com" class="menu_link" rel="noindex">Ссылка noindex</a></li>
+                    </ol>
+                </div>
+              
+                <div class="context">
+                    <p class="context_text"><a href="https://example.com">Контекстная</a> в тексте абзаца</p>
+                    <ol class="context_list">
+                        <li class="context_item"><a href="https://example.com" class="context_link">
+                                                <img class="context_map" src="image1.jpg" alt="flower"></a></li>
+                        <li class="context_item"><img class="context_map" src="image1.jpg" alt="map">
+                                                <map name="navigation">
+                                                    <area shape="circle"
+                                                    coords="400,400,200"
+                                                    href="https://www.youtube.com/"
+                                                    alt="circle">
+                                                    <area shape="rect"
+                                                    coords="0,0,200,200"
+                                                    href="https://www.google.com/maps"
+                                                    alt="rectangle">
+                                                </map>
+                        </li>
+                        <li class="context_item"><a href="./myfile.zip" class="context_link">Относительная ссылка на файл в том же каталоге</a></li>
+                        <li class="context_item"><a href="./about/contacts.html" class="context_link">Относительная ссылка на файл в каталоге about</a></li>
+                        <li class="context_item"><a href="../myfile.zip" class="context_link">Относительная ссылка на файл в каталоге, выше нынешнего на один</a></li>
+                        <li class="context_item"><a href="../../random.html" class="context_link">Относительная ссылка на файл двумя каталогами выше</a></li>
+                        <li class="context_item"><a href="/" class="context_link">Сокращенная ссылка на главную</a></li>
+                        <li class="context_item"><a href="/form.html" class="context_link">Сокращенная на внутреннюю</a></li>
+                    </ol>
+                </div>
+
+                <h1 id = "table">Таблица</h1>
+                <table class="table">
+                    <tr>
+                    <th>Первый</th>
+                    <th>Второй</th>
+                    <th>Третий</th>
+                    </tr>
+                    <tbody>
+                    <tr>
+                    <td colspan="2">1 2</td>
+                    <td>3</td>
+                    </tr>
+                    <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    </tr>
+                    <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    </tr>
+                    <tr>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">13 14 15</td>
+                    </tr>
+                    </tbody>
+                </table><br>
+
+                <h1 id="form">Форма</h1>
+                <form class="form" action="#" method="post">
+                    <h2>Имя:</h2>
+                        <input type="text"
+                            name="fill-name"
+                            placeholder="Имя:"><br>
+                    <h2>E-mail:</h2>
+                        <input type="email"
+                            name="email"
+                            placeholder="email@mail.ru"><br>
+                    <h2>Дата рождения:</h2>
+                        <input type="date"
+                            name="date"
+                            value="2000-01-01"><br>
+                    <h2>Пол:</h2>
+                        <label for="male"></label>
+                            <input type="radio"
+                                checked="checked"
+                                name="gender"
+                                value="Мужской" />Мужской
+                        </label><br>
+                        <label for="female">
+                            <input type="radio"
+                                    id="female"
+                                    name="gender"
+                                    value="Женский"/>Женский
+                        </label><br>
+                    <h2>Количество конечностей:</h2>
+                        <input type="radio" checked="checked"
+                            name="count" value="Четыре" />Четыре<br>
+                        <input type="radio"
+                            name="count" value="Пять" />Пять<br>
+                    <h2>Сверхспособности: </h2>
+                        <select name="superpowers"
+                                multiple="multiple">
+                            <option value="Значение1">Высыпаться</option>
+                            <option value="Значение2" selected="selected">Левитация</option>
+                            <option value="Значение3" selected="selected">Бессмертие</option>
+                        </select><br>
+                    <h2>Биография</h2>
+                        <textarea name="textarea"></textarea><br>
+                    <label for="agree">
+                        <input type="checkbox"
+                            name="check" id="agree">С контрактом ознакомлен(а)
+                    </label><br>
+                    <input type="submit" value="Отправить">
+                </form>
+
+            </section>
+        </main>
     </div>
     <footer>
-        <p class="bottom">Олехов Даниил, 2021</p>
+        <small class="copyright">Олехов Даниил, 2021</small>
     </footer>
 </body>
 </html>
