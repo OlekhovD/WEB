@@ -127,7 +127,7 @@
                     <h2>Пол:</h2>
                         <label for="male">
                             <input type="radio"
-                                checked="checked"
+                                id="male"
                                 name="gender"
                                 value="Мужской"/>Мужской
                         </label><br>
@@ -138,16 +138,14 @@
                                     value="Женский"/>Женский
                         </label><br>
                     <h2>Количество конечностей:</h2>
-                        <input type="radio" checked="checked"
-                            name="count" value="Четыре" />Четыре<br>
-                        <input type="radio"
-                            name="count" value="Пять" />Пять<br>
+                        <input type="radio" checked="checked" name="count" value="Четыре" />Четыре<br>
+                        <input type="radio" name="count" value="Пять" />Пять<br>
                     <h2>Сверхспособности: </h2>
                         <select name="superpowers"
                                 multiple="multiple">
                             <option value="Значение1">Высыпаться</option>
-                            <option value="Значение2" selected="selected">Левитация</option>
-                            <option value="Значение3" selected="selected">Бессмертие</option>
+                            <option value="Значение2">Левитация</option>
+                            <option value="Значение3">Бессмертие</option>
                         </select><br>
                     <h2>Биография</h2>
                         <textarea name="textarea"></textarea><br>
