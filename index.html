@@ -1,166 +1,186 @@
 <!DOCTYPE html>
-<html lang = "ru">
-
+<html lang="en">
 <head>
-    <meta charset = "UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Пример сайта</title>
+    <meta charset="UTF-8">
+    <title>Задание 4</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body class="body">
-    <header class="header">
-        <div class="container header_container">
-            <img class="header_logo" src="image2.png" alt="logo" >
-            <span class="header_heading">Название сайта</span>
+<body>
+<div class="back">
+<header name="element_id">
+    <div class="container-fluid">
+        <div class="col-12 row justify-content-center align-items-center">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <img class="logo" src="image2.png">
+            Заголовок сайта
+            </div>
         </div>
-    </header>
-    <nav class="container nav">
-        <ul class="nav_list">
-            <li class="nav__item"><a href="#links" class="nav_link">Ссылки</a></li>
-            <li class="nav__item"><a href="#table" class="nav_link">Таблица</a></li>
-            <li class="nav__item"><a href="#form" class="nav_link">Форма</a></li>
-        </ul>
-    </nav>
-    <div class = "container">
-        <main class="main">
-            <section class="templates">
-                <div class="anchor">
-                    <h1 id = "links">Ссылки</h1>
-                    <ol class="anchor__list">
-                        <li class="anchor_item"><a href="http://example.com/" class="anchor_link">Абсолютная гиперссылка на главную страницу сайта example.com;</a></li>
-                        <li class="anchor_item"><a href="https://example.com/" class="anchor_link">Абсолютная на главную сайта example.com в протоколе https;</a></li>
-                        <li class="anchor_item"><a href="ftp://example.com/myfile.zip" class="anchor_link">Ссылка на файл на сервере FTP без авторизации;</a></li>
-                        <li class="anchor_item"><a href="ftp://user:password@example.com/myfile.zip" class="anchor_link">Ссылка на файл на сервере FTP с авторизацией;</a></li>
-                        <li class="anchor_item"><a href="http://example.com/page#about" class="anchor_link">Ссылка на фрагмент страницы некоторого сайта;</a></li>
-                        <li class="anchor_item"><a href="#services" class="anchor_link">Ссылка на фрагмент текущей страницы;</a></li>
-                        <li class="anchor_item"><a href="http://example.com/?id=master&repo=chat" class="anchor_link">Ссылка с двумя параметрами в URL;</a></li>
-                      </ol>
-                </div>
-              
-                <div class="menu">
-                    <h2 class="menu_heading">Навигационное меню</h2>
-                    <a href="#about" title="О компании">О компании</a>
-                    <a href="#services" title="Услуги">Услуги</a>
-                    <a href="#" title="Главная">Главная</a>
-                    <ol class="menu_list">
-                        <li class="menu_item"><a class="menu_link">Ссылка без href</a></li>
-                        <li class="menu_item"><a href class="menu_link">Ссылка с пустым href</a></li>
-                        <li class="menu_item"><a href="https://test.com" class="menu_link" rel="nofollow">Ссылка nofollow</a></li>
-                        <li class="menu_item"><a href="https://test.com" class="menu_link" rel="noindex">Ссылка noindex</a></li>
-                    </ol>
-                </div>
-              
-                <div class="context">
-                    <p class="context_text"><a href="https://example.com">Контекстная</a> в тексте абзаца</p>
-                    <ol class="context_list">
-                        <li class="context_item"><a href="https://example.com" class="context_link">
-                                                <img class="context_map" src="image1.jpg" alt="flower"></a></li>
-                        <li class="context_item"><img class="context_map" src="image1.jpg" alt="map">
-                                                <map name="navigation">
-                                                    <area shape="circle"
-                                                    coords="400,400,200"
-                                                    href="https://www.youtube.com/"
-                                                    alt="circle">
-                                                    <area shape="rect"
-                                                    coords="0,0,200,200"
-                                                    href="https://www.google.com/maps"
-                                                    alt="rectangle">
-                                                </map>
-                        </li>
-                        <li class="context_item"><a href="./myfile.zip" class="context_link">Относительная ссылка на файл в том же каталоге</a></li>
-                        <li class="context_item"><a href="./about/contacts.html" class="context_link">Относительная ссылка на файл в каталоге about</a></li>
-                        <li class="context_item"><a href="../myfile.zip" class="context_link">Относительная ссылка на файл в каталоге, выше нынешнего на один</a></li>
-                        <li class="context_item"><a href="../../random.html" class="context_link">Относительная ссылка на файл двумя каталогами выше</a></li>
-                        <li class="context_item"><a href="/" class="context_link">Сокращенная ссылка на главную</a></li>
-                        <li class="context_item"><a href="/form.html" class="context_link">Сокращенная на внутреннюю</a></li>
-                    </ol>
-                </div>
-
-                <h1 id = "table">Таблица</h1>
-                <table class="table">
-                    <tr>
-                    <th>Первый</th>
-                    <th>Второй</th>
-                    <th>Третий</th>
-                    </tr>
-                    <tbody>
-                    <tr>
-                    <td colspan="2">1 2</td>
-                    <td>3</td>
-                    </tr>
-                    <tr>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    </tr>
-                    <tr>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    </tr>
-                    <tr>
-                    <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">13 14 15</td>
-                    </tr>
-                    </tbody>
-                </table><br>
-
-                <h1 id="form">Форма</h1>
-                <form class="form" action="#" method="post">
-                    <h2>Имя:</h2>
-                        <input type="text"
-                            name="fill-name"
-                            placeholder="Имя:"><br>
-                    <h2>E-mail:</h2>
-                        <input type="email"
-                            name="email"
-                            placeholder="email@mail.ru"><br>
-                    <h2>Дата рождения:</h2>
-                        <input type="date"
-                            name="date"
-                            value="2000-01-01"><br>
-                    <h2>Пол:</h2>
-                        <label for="male">
-                            <input type="radio"
-                                id="male"
-                                name="gender"
-                                value="Мужской"/>Мужской
-                        </label><br>
-                        <label for="female">
-                            <input type="radio"
-                                    id="female"
-                                    name="gender"
-                                    value="Женский"/>Женский
-                        </label><br>
-                    <h2>Количество конечностей:</h2>
-                        <input type="radio" checked="checked" name="count" value="Четыре" />Четыре<br>
-                        <input type="radio" name="count" value="Пять" />Пять<br>
-                    <h2>Сверхспособности: </h2>
-                        <select name="superpowers"
-                                multiple="multiple">
-                            <option value="Значение1">Высыпаться</option>
-                            <option value="Значение2">Левитация</option>
-                            <option value="Значение3">Бессмертие</option>
-                        </select><br>
-                    <h2>Биография</h2>
-                        <textarea name="textarea"></textarea><br>
-                    <label for="agree">
-                        <input type="checkbox"
-                            name="check" id="agree">С контрактом ознакомлен(а)
-                    </label><br>
-                    <input type="submit" value="Отправить">
-                </form>
-
-            </section>
-        </main>
     </div>
-    <footer>
-        <small class="copyright">Олехов Даниил, 2021</small>
-    </footer>
+</header>
+
+<div class="container-fluid mt-4" id="flag">
+
+    <div class="col-12 row justify-content-center align-items-center" style="padding: 0;">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8" style="padding-right: 0;">
+            <nav>
+                <ul class="row">
+                    <li class="col-md-4 col-lg-4 col-xs-4 col-sm-8"><a href="#links">Список гиперссылок</a></li>
+                    <li class="col-md-4 col-lg-4 col-xs-4 col-sm-8"><a href="#table">Таблица</a></li>
+                    <li class="col-md-4 col-lg-4 col-xs-4 col-sm-8"><a href="#form">Форма</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="col-12 row justify-content-center align-items-center " style="padding-right:0;">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-light">
+            <div id="links">
+                <h1 class="text-center">Список ссылок</h1>
+                <ol class="menu_2">
+                    <li><a href="http://cats.com" id="#flag">Абсолютная гиперссылка на главную страницу сайта</a></li>
+                    <li><a href="https://meme.com">Абсолютная на главную в протоколе https</a></li>
+                    <li><a href="ftp://ubisoft.com/games/example">Ссылка на файл на сервере FTP без авторизации</a></li>
+                    <li><a href="ftp://user:password@ubisoft.com/games/example">С авторизацией</a></li>
+                    <li>
+                        <a href="https://ru.wikipedia.org/wiki/Википедия:Внутренние_ссылки#На_что_следует_ссылаться">
+                            Ссылка на фрагмент страницы некоторого сайта
+                        </a>
+                    </li>
+                    <li><a href="#element_id">Cсылка на фрагмент текущей страницы</a></li>
+                    <li><a href="https://idroo.com/?a=0&c=1">Cсылка с двумя параметрами</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#element_id" title="О чём">Оглавление</a></li>
+                            <li><a href="#flag" title="Суть">Основной материал</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Ссылка без href</a></li>
+                    <li><a href="">Ссылка с пустым href</a></li>
+                    <li><a href="https://cats.com" rel="nofollow">Запрет перехода поисковикам</a></li>
+                    <li><a href="https://cats.com" rel="noindex">Запрещенная для индексации поисковиками</a></li>
+                    <li><p> Контекстная <a href="https://en.wikipedia.org/wiki/Rick_and_Morty" title="source">ссылка</a> в тексте абзаца
+                    </p></li>
+                    <li>
+                        <a href="https://ru.wikipedia.org/wiki/Муравьи">
+                            <img src="image1.jpg" width="100" height="100" alt="">
+                        </a>
+                    </li><br>
+                    <li>
+                        <img src="image1.jpg" alt="flower" width="200" height="200" usemap="#Жаба" alt="">
+                        <map name="ricks">
+                            <area shape="circle" coords="100,100,50" href="https://www.youtube.com/watch?v=_5348G7LZQc" alt="">
+                            <area shape="rect" coords="150,150,200,200" href="https://ru.wikipedia.org/wiki/Прямоугольник" alt="">
+                        </map>
+                    </li>
+                    <li><a href="kek">Относительная ссылка на страницу в текущем каталоге</a></li>
+                    <li><a href="./about/lol">Относительная ссылка на страницу в каталоге about</a></li>
+                    <li><a href="../meme">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+                    <li><a href="../../peace">Относительная на страницу в каталоге двумя уровнями выше текущего</a></li>
+                    <li><a href="/">Сокращенная ссылка на главную</a></li>
+                    <li><a href="/world">Сокращенная ссылка на внутреннюю</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 row justify-content-center align-items-center order-2 order-md-1" style="padding-right:0;">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-light">
+            <table id="table" class="table table-striped table-bordered">
+                <h1 class="text-center">Таблица</h1>
+                <tbody>
+                <tr class="even">
+                    <th colspan="4" class="text-center">Заголовок таблицы</th>
+                </tr>
+                <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                    <td>Ячейка 3</td>
+                </tr>
+                <tr class="even">
+                    <td>Ячейка 4</td>
+                    <td>Ячейка 5</td>
+                    <td>Ячейка 6</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 7</td>
+                    <td>Ячейка 8</td>
+                    <td>Ячейка 9</td>
+                </tr>
+                <tr class="even">
+                    <td>Ячейка 10</td>
+                    <td>Ячейка 11</td>
+                    <td>Ячейка 12</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 13</td>
+                    <td>Ячейка 14</td>
+                    <td>Ячейка 15</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-12 row justify-content-center align-items-center order-1 order-md-2 mb-4" style="padding-right:0;">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 bg-light">
+            <div id="form">
+                <h1>Форма</h1>
+                <form method="post" role="form">
+                    <div class="form-group">
+                        <label>Имя:<br>
+                            <input name="field-name" class="form-control" value="" placeholder="Имя">
+                        </label><br><br>
+
+                        <label>
+                            Ваш email:<br>
+                            <input name="field-email" value="" class="form-control" placeholder="test@example.com" type="email">
+                        </label><br><br>
+
+                        <label>
+                            Дата рождения:<br>
+                            <input name="field-date" class="form-control" value="" type="date">
+                        </label><br><br>
+
+                        Пол:<br>
+                        <label><input type="radio" name="my_radio1" value="Мужской">Мужской</label>
+                        <label><input type="radio" name="my_radio1" value="Женский">Женский</label><br><br>
+
+                        Количество конечностей:<br>
+                        <label><input type="radio" name="my_radio" value="1">1</label>
+                        <label><input type="radio" name="my_radio" value="2">2</label>
+                        <label><input type="radio" name="my_radio" value="3">3</label>
+                        <label><input type="radio" name="my_radio" value="4">4</label><br><br>
+
+                        <label>
+                            Сверхспособности:<br>
+                            <select name="field-name-4" multiple="multiple" class="form-control">
+                                <option value="Бессмертие">Бессмертие</option>
+                                <option value="Прохождение сквозь стены">Прохождение сквозь стены</option>
+                                <option value="Левитация">Левитация</option>
+                            </select>
+                        </label><br><br>
+
+                        <label>
+                            Биография:<br>
+                            <textarea name="field-name-2" class="form-control" placeholder="Напишите о себе..."></textarea>
+                        </label><br><br>
+
+                        <label><input type="checkbox" name="check-1">С контрактом ознакомлен</label><br>
+
+                        <input type="submit" value="Отправить">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="footer__copy d-flex justify-content-center">
+    &copy; Олехов Даниил 2021
+</footer>
+
 </body>
 </html>
