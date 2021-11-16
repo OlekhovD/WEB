@@ -15,7 +15,7 @@ function calculate() {
     } else if (number == "") {
         alert("Введите количество одежды");
     } else if (price == "") {
-        alert("Выберите цену одежды");
+        alert("Введите цену одежды");
     } else {
         const cost = number * price;
         document.getElementById("cost").innerHTML =
